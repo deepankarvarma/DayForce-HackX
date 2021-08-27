@@ -1,15 +1,41 @@
 <html>
+
+<head>
+    <title>Register | DayFORCE</title>
+
+</head>
 <body>
-
-<form method ="post" action="">
+<form method ="POST " action="">
 {% csrf_token %}
-Name<input type="text" name="t1"><br>
-Email<input type="text" name="t2"><br>
-Password<input type="text" name="t3"><br>
-Contact<input type="test" name="t4"><br>
-
+<h1 class="main_head">Employee Registration</h1>
+<hr>
+<p>Name:*
+    <br><input type="text" name="t1" required placeholder="Enter Your Name">
+</p>
+<p><fieldset>
+        <legend>Gender:*</legend>
+        Male<input type="radio" name="Gender" required id="">
+        Female<input type="radio" name="Gender" required id="">
+        </fieldset>
+</p>
+<p>
+    Address:* <br>
+    <textarea name="Address" id="" cols="100" rows="5" required placeholder="Your Address Here"></textarea>
+</p>
+<p>    
+    Email*: <br>
+    <input type="email" name="email " id="t2" required placeholder="Email Please">
+</p>
+<p>
+    Pincode:*<br> <input type="number" name="pincode" id="" placeholder="Your pincode here">
+</p>
+<p>Password:*<br><input type="password" required placeholder="Enter your password" name="t3">
+</p> 
+<p>   
+Contact:*<br><input type="number" name="t4" required placeholder="Enter your contact number">
+<p>
 <input type="submit" value="register">
-</form>
+</p></form>
 {% ifequal error "no" %}
 <script>
 alert("Register Successfully")
