@@ -1,24 +1,21 @@
 <html>
-<body>
-<h3>Login</h3>
-<form method ="post" action="">
- {% csrf_token %}
- 
-Name<input type="text" name="t1"><br>
-Password<input type="text" name="t2"><br>
-<input type="submit" value="ok">
-</form>
+  <body>
+    <h3>Login</h3>
+    <form method="post" action="">
+      {% csrf_token %} Name<input type="text" name="t1" /><br />
+      Password<input type="text" name="t2" /><br />
+      <input type="submit" value="ok" />
+    </form>
 
-{% ifequal error1 "no" %}
-<script>
-alert("Login Successfully")
-window.location=('http://127.0.0.1:8000/home')
-</script>
-{% endifequal %}
-{% ifequal error1 "yes" %}
-<script>
-alert("Sorry,Try again")
-</script>
-{% endifequal %}
-</body>
+    {% ifequal error1 "no" %}
+    <script>
+      alert("Login Successfully");
+      window.location = "http://127.0.0.1:8000/home";
+    </script>
+    {% endifequal %} {% ifequal error1 "yes" %}
+    <script>
+      alert("Sorry,Try again");
+    </script>
+    {% endifequal %}
+  </body>
 </html>
