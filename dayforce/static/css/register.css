@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    /* changing the size of the box model */
+}
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin:15px 30px;
+    /* 15px:- top and bottom ; 30px:- left and right */
+    font-size: 17px;
+    padding: 8px;
+
+}
+.container{
+    background-color: rgb(224, 255, 240);
+    padding: 5px 20px 15px 20px;
+    border: 1px groove lightgray;
+    border-radius: 4px;
+    /* to curve the border corners */
+}
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="text"],
+select,
+textarea{
+    width: 100%;
+    margin-top: 5px;
+   padding: 10px;
+    border: 1px solid lightgreen;
+    border-radius: 5px;
+}
+fieldset{
+    width: 100%;
+    height: 10%;
+    padding: 10px;
+    border: 1px solid lightgreen;
+    border-radius: 5px;
+}
+.main_head{
+    text-align: center;
+}
+input[type="submit"]{
+    background-color: #4caf84;
+    color: white;
+    padding:15px;
+    font-size: 17px;
+    font-family:Tahoma;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+input[type="submit"]:hover{
+    background-color: cadetblue;
+}
