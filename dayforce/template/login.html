@@ -1,22 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<html>
 <body>
-    <form action="" method="POST" class="container"></form>
-    <h1 class="main_head">Login</h1>
-    <hr>
-    <p>UID/Email/Phone :*
-        <br><input type="email" name="UID" required placeholder="Enter Your UID/Email/Phone">
-    </p>   
-    <p>
-        Password :*
-        <br><input type="password" name="password" required placeholder="Enter Your Password">
-    </p>
-    <h5><a href="http://">Forgot Password</a></h5> 
+<h3>Login</h3>
+<form method ="post" action="">
+ {% csrf_token %}
+ 
+Name<input type="text" name="t1"><br>
+Password<input type="text" name="t2"><br>
+<input type="submit" value="ok">
+</form>
+
+{% ifequal error1 "no" %}
+<script>
+alert("Login Successfully")
+window.location=('http://127.0.0.1:8000/home')
+</script>
+{% endifequal %}
+{% ifequal error1 "yes" %}
+<script>
+alert("Sorry,Try again")
+</script>
+{% endifequal %}
 </body>
 </html>
