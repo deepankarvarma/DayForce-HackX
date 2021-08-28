@@ -228,3 +228,20 @@ body {
         display: block;
     }
 }
+#slideshow { 
+  margin: 0px !important;
+  position: relative !important; 
+  width: 100% !important; 
+  height: auto !important; 
+  padding: 0px !important; 
+  box-shadow: 0 0 20px rgba(0,0,0,0.4) !important;
+   
+}
+
+#slideshow > div { 
+  position: absolute !important; 
+  top: 10px !important; 
+  left: 10px !important; 
+  right: 10px !important; 
+  bottom: 10px !important; 
+}
