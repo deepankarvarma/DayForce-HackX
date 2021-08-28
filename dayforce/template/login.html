@@ -4,9 +4,10 @@
     <link rel="stylesheet" href="../static/css/register.css">
   </head>
   <body>
+    <form method="POST" action="" class="container">
     <h1 class="main_head">Employee Login</h1>
 <hr>
-    <form method="POST" action="">
+    
       {% csrf_token %} 
       <p>Name:*
         <br><input type="text" name="t1" required placeholder="Enter Your Name">
