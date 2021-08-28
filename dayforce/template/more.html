@@ -14,6 +14,20 @@
     body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
     .fa-anchor,.fa-coffee {font-size:200px}
+    .row {
+  display: flex;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  height: 15%;
+  padding: 5px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
     </style>
 
   <body>
@@ -35,23 +49,31 @@
         <a href="#" class="w3-bar-item w3-button w3-padding-large">Demo</a>
       </div>
     </div>
-    <header class="w3-container w3-red w3-center" style="padding:128px 16px">
-      <h1 class="w3-margin w3-jumbo">More Serivces</h1>
+    <div style="background-repeat: no-repeat; background-size: cover; background-image: url(../static/images/more.png);">
+    <header class="w3-container  w3-center" style="padding:128px 16px">
+      <b><h1 class="w3-margin w3-jumbo">More Services</h1></b>
       <p class="w3-xlarge">"Explore our services"</p>
       
     </header>
-    
-    <span><a href="http://127.0.0.1:8000/feedback" ><img src="https://www.trimleystmartinprimaryschool.com/uploads/2/7/3/5/27353585/published/feedback-logo.png?1577572551"></a></span>
-    <br>
-    <span>
-    <a href=" http://127.0.0.1:8000/grs" ><img src="https://i.pinimg.com/236x/02/99/eb/0299eb41f2393c486809f696ac25c6cc.jpg" alt="" ></a></span>
-    <br>
-    <span>
-      <a href="http://127.0.0.1:8000/srs" ><img src="" alt=""></a>
-    <br>
-    </span>
-    
-    <a href="meetingroom.html" >Meeting Room Booking</a>
-    <br>
+  </div>
+  <div class="row"></div>
+    <div class="column"><a href="http://127.0.0.1:8000/feedback" ><img src="https://www.trimleystmartinprimaryschool.com/uploads/2/7/3/5/27353585/published/feedback-logo.png?1577572551" style="width: 100%;"></a></div>
+   
+    <div class="column">
+    <a href=" http://127.0.0.1:8000/grs" ><img src="https://i.pinimg.com/236x/02/99/eb/0299eb41f2393c486809f696ac25c6cc.jpg" alt="" style="width: 100%;"></a></div>
+  
+    <div class="column">
+      <a href="http://127.0.0.1:8000/srs" ><img src="https://s3.amazonaws.com/media.eremedia.com/uploads/2017/04/review.png" alt="" style="width: 100%;"></a></div>
+   </div>
+   <div class="row"></div>
+    <div class="column">
+      <a href="http://127.0.0.1:8000/srs" ><img src="../static/images/meeting-room-icon-vector-3467712.jpg" alt="" style="width: 100%; "></a></div>
+      
+    <div class="column">
+      <a href="http://127.0.0.1:8000/srs" ><img src="https://learn.g2.com/hubfs/chatbot-3.jpg" alt="" style="width: 100%; "></a></div>
+        
+    <div class="column">
+      <a href="http://127.0.0.1:8000/srs" ><img src="https://is3-ssl.mzstatic.com/image/thumb/Purple71/v4/55/22/2d/55222de9-12ee-3a3c-2b29-9c0e74e3c953/source/512x512bb.jpg" alt="" style="width: 100%; "></a></div>
+    </div>      
 </body>
 </html>
