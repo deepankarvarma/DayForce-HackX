@@ -100,6 +100,28 @@ def srs(request):
 	d={'error':error}
 	return render(request,'srs.html',d)
 
+def grs(request):
+	error=""
+	
+	if request.method=="POST":
+		n=request.POST['t1']
+		m=request.POST['t2']
+		i=request.POST['t3']
+		a=request.POST['card1']
+		b=request.POST['detail']
+		
+
+		
+		try:
+			Grs.objects.create(name=n,email=m,contact=i,types=a,detail=b) ##inser command
+			error="no"
+			
+		except:  
+			error="yes"
+	
+	d={'error':error}
+	return render(request,'grs.html',d)
+
 
 
 

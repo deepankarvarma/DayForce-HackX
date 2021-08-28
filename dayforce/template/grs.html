@@ -1,6 +1,21 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
+<html lang="en">
+<head>
+{% ifequal error "no" %}
+<script>
+alert("Recorded Successfully")
+window.location.href='/home'
+</script>
+{% endifequal %}
+{% ifequal error "yes" %}
+<script>
+alert("Sorry,Try again")
+</script>
+{% endifequal %}
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +23,7 @@
     <link rel="stylesheet" href="../static/css/register.css">
 </head>
 <form class="container" method ="POST">
+{% csrf_token %}
 <body>
 
     <h1 class="main_head">Grievance Redressal System</h1>
@@ -19,14 +35,14 @@
   
 <p>    
     Email*: <br>
-    <input type="email" name="t2 " id="email" required placeholder="Email Please">
+    <input type="email" name="t2" id="email" required placeholder="Email Please">
 </p>
 
 
-Contact:*<br><input type="number" name="t4" required placeholder="Enter your contact number">
+Contact:*<br><input type="number" name="t3" required placeholder="Enter your contact number">
 </p>
     <p>Grievance Type:*<br>
-        <select name="card_type" id="" required>
+        <select name="card1" id="" required>
             <option value="--">--Select A Grievance Type--</option>
             <option value="sch">Schedule</option>
             <option value="mr">Meeting Room</option>
@@ -35,7 +51,7 @@ Contact:*<br><input type="number" name="t4" required placeholder="Enter your con
     </p>
     <p>
         Grievance Details:* <br>
-        <textarea name="t6" id="" cols="100" rows="5" required placeholder="Explain Your Grievance"></textarea>
+        <textarea name="detail" id="" cols="100" rows="5" required placeholder="Explain Your Grievance"></textarea>
     </p>  
 <input type="submit" value="Register A Grievance">
 </p></form>
