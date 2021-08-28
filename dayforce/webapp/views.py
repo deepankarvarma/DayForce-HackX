@@ -125,6 +125,15 @@ def grs(request):
 def homeal(request):
     return render(request,'homeal.html')
 
+def aboutal(request):
+    return render(request,'aboutal.html')
+
+def scheduleal(request):
+    return render(request,'scheduleal.html')
+
+def calenderal(request):
+    return render(request,'calenderal.html')
+
 
 
 

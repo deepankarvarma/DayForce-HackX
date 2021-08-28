@@ -31,4 +31,7 @@ urlpatterns = [
     path('srs/',views.srs),
     path('grs/',views.grs),
     path('homeal/',views.homeal),
+    path('scheduleal/',views.scheduleal),
+    path('calenderal/',views.calenderal),
+    path('aboutal/',views.aboutal),
 ]
