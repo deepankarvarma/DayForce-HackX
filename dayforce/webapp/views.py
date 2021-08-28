@@ -68,6 +68,16 @@ def feedback(request):
 def more(request):
 	return render(request,'more.html')
 
+def about(request):
+	return render(request,'about.html')
+
+def schedule(request):
+	return render(request,'schedule.html')
+
+def calender(request):
+	return render(request,'calender.html')
+
+
 
 
 
