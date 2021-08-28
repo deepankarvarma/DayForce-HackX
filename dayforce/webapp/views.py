@@ -34,10 +34,9 @@ def register(request):
 		m=request.POST['t2']
 		i=request.POST['t3']
 		j=request.POST['t4']
-		l=request.POST['t6']
-        
+	
 		try:
-			Register.objects.create(name=n,email=m,password=i,contact=j,address=l) ##inser command
+			Register.objects.create(name=n,email=m,password=i,contact=j) ##inser command
 			error="no"
 		except:  
 			error="yes"
