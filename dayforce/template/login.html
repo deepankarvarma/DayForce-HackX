@@ -1,10 +1,19 @@
 <html>
+  <head>
+    <title>Login | DayFORCE</title>
+    <link rel="stylesheet" href="../static/css/register.css">
+  </head>
   <body>
-    <h3>Login</h3>
-    <form method="post" action="">
-      {% csrf_token %} Name<input type="text" name="t1" /><br />
-      Password<input type="text" name="t2" /><br />
-      <input type="submit" value="ok" />
+    <h1 class="main_head">Employee Login</h1>
+<hr>
+    <form method="POST" action="">
+      {% csrf_token %} 
+      <p>Name:*
+        <br><input type="text" name="t1" required placeholder="Enter Your Name">
+    </p>
+    <p>Password:*<br><input type="password" required placeholder="Enter your password" name="t2">
+    </p> 
+      <input type="submit" value="Login" />
     </form>
 
     {% ifequal error1 "no" %}
