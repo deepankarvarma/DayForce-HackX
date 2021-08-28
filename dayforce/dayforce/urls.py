@@ -23,5 +23,9 @@ urlpatterns = [
     path('register/',views.register),
     path('login/',views.login),
     path('feedback/',views.feedback),
-    path('more/',views.more), 
+    path('more/',views.more),
+    path('about/',views.about), 
+    path('more/',views.more),
+    path('schedule/',views.schedule),
+    path('calender/',views.calender),
 ]
