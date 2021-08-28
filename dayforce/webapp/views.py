@@ -122,6 +122,9 @@ def grs(request):
 	d={'error':error}
 	return render(request,'grs.html',d)
 
+def homeal(request):
+    return render(request,'homeal.html')
+
 
 
 
