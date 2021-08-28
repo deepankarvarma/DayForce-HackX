@@ -1,6 +1,19 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
+{% ifequal error "no" %}
+<script>
+alert("Suggestions submitted")
+window.location.href='/home'
+</script>
+{% endifequal %}
+{% ifequal error "yes" %}
+<script>
+alert("Sorry,Try again")
+</script>
+{% endifequal %}
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +21,7 @@
     <link rel="stylesheet" href="../static/css/register.css">
 </head>
 <form class="container" method ="POST">
+{% csrf_token %}
 <body>
 
     <h1 class="main_head">Suggestions Form</h1>
@@ -19,17 +33,15 @@
   
 <p>    
     Email*: <br>
-    <input type="email" name="t2 " id="email" required placeholder="Email Please">
+    <input type="email" name="t2" id="email" required placeholder="Email Please">
 </p>
 
-<p> Password:*<br><input type="password" required placeholder="Enter your password" name="t3">
-</p> 
-<p>   
+  
 Contact:*<br><input type="number" name="t4" required placeholder="Enter your contact number">
 </p>
     <p>
         Suggestions/Improvements:* <br>
-        <textarea name="t6" id="" cols="100" rows="5" required placeholder="Your Address Here"></textarea>
+        <textarea name="t3" id="" cols="100" rows="5" required placeholder="Your Address Here"></textarea>
     </p>  
 <input type="submit" value="Submit Your Suggestion">
 </p></form>

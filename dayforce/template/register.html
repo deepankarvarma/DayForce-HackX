@@ -2,12 +2,24 @@
 {% load static %}
 
 <head>
+{% ifequal error "no" %}
+<script>
+alert("Register Successfully")
+window.location.href='/home'
+</script>
+{% endifequal %}
+{% ifequal error "yes" %}
+<script>
+alert("Sorry,Try again")
+</script>
+{% endifequal %}
+
     <title>Register | DayFORCE</title>
     <link rel="stylesheet" href="../static/css/register.css">
 </head>
 <body>
-<form method ="POST " action="" class="container">
-
+<form method ="POST" class="container">
+{% csrf_token %}
 <h1 class="main_head">Employee Registration</h1>
 <hr>
 <p>Name:*
@@ -18,7 +30,7 @@
 
 <p>    
     Email*: <br>
-    <input type="email" name="email " id="t2" required placeholder="Email Please">
+    <input type="email" name="t2" id="email" required placeholder="Email Please">
 </p>
 
 <p>Password:*<br><input type="password" required placeholder="Enter your password" name="t3">
@@ -28,16 +40,10 @@ Contact:*<br><input type="number" name="t4" required placeholder="Enter your con
 <p>
 <input type="submit" value="Register">
 </p></form>
-{% ifequal error "no" %}
-<script>
-alert("Register Successfully")
-window.location=('http://127.0.0.1:8000/home')
-</script>
-{% endifequal %}
-{% ifequal error "yes" %}
-<script>
-alert("Sorry,Try again")
-</script>
-{% endifequal %}
+
+
+
+
+
 </body>
 </html>
