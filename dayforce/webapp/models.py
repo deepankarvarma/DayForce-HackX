@@ -32,11 +32,15 @@ class Feedback(models.Model):
 
 
 
-class Suggestion(models.Model):
+
+class Srs(models.Model):
     name=models.CharField(max_length=50)
     email=models.CharField(max_length=50)
     contact=models.CharField(max_length=50)
     suggestion=models.CharField(max_length=200)
+    shift=models.CharField(max_length=50)
+    meeting=models.CharField(max_length=50)
+    overall=models.CharField(max_length=50)
 
 
   

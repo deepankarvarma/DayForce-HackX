@@ -1,6 +1,21 @@
 <!DOCTYPE html>
+{% load static %}
+
+
 <html lang="en">
 <head>
+{% ifequal error "no" %}
+<script>
+alert("Recorded Successfully")
+window.location.href='/home'
+</script>
+{% endifequal %}
+{% ifequal error "yes" %}
+<script>
+alert("Sorry,Try again")
+</script>
+{% endifequal %}
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +23,7 @@
     <link rel="stylesheet" href="../static/css/register.css">
 </head>
 <form class="container" method ="POST">
+{% csrf_token %}
 <body>
 
     <h1 class="main_head">Satisfactory Rating System</h1>
@@ -28,7 +44,7 @@ Contact:*<br><input type="number" name="t4" required placeholder="Enter your con
 <p><fieldset>
     <legend>How Comfortable Are you with your shift:</legend>
     
-    <select name="card_type" id="" required>
+    <select name="card1" id="" required>
         <option value="--">--Select A Rating--</option>
         <option value="exc">1-Excellent</option>
         <option value="good">2-Good</option>
@@ -41,7 +57,7 @@ Contact:*<br><input type="number" name="t4" required placeholder="Enter your con
     <p><fieldset>
         <legend>How Comfortable Are you with the  meeting room:</legend>
         
-            <select name="card_type" id="" required>
+            <select name="card2" id="" required>
                 <option value="--">--Select A Rating--</option>
                 <option value="exc">1-Excellent</option>
                 <option value="good">2-Good</option>
@@ -55,7 +71,7 @@ Contact:*<br><input type="number" name="t4" required placeholder="Enter your con
         <p><fieldset>
             <legend>Overall Rating:</legend>
            
-            <select name="card_type" id="" required>
+            <select name="card3" id="" required>
                 <option value="--">--Select A Rating--</option>
                 <option value="exc">1-Excellent</option>
                 <option value="good">2-Good</option>
@@ -67,7 +83,7 @@ Contact:*<br><input type="number" name="t4" required placeholder="Enter your con
             </p>      
     <p>
         Suggestions(if any): <br>
-        <textarea name="t6" id="" cols="100" rows="5"  placeholder="Your Suggestions Here"></textarea>
+        <textarea name="t3" id="" cols="100" rows="5"  placeholder="Your Suggestions Here"></textarea>
     </p>  
 <input type="submit" value="Submit Your Ratings">
 </p></form>

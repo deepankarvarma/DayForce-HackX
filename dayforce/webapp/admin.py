@@ -3,5 +3,7 @@ from .models import *
 
 admin.site.register(Register)
 admin.site.register(Feedback)
+admin.site.register(Srs)
+
 
 # Register your models here.

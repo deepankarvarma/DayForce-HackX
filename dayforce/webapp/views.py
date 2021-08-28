@@ -78,6 +78,29 @@ def calender(request):
 	return render(request,'calender.html')
 
 
+def srs(request):
+	error=""
+	
+	if request.method=="POST":
+		n=request.POST['t1']
+		m=request.POST['t2']
+		i=request.POST['t3']
+		j=request.POST['t4']
+		a=request.POST['card1']
+		b=request.POST['card2']
+		c=request.POST['card3']
+	
+		try:
+			Srs.objects.create(name=n,email=m,suggestion=i,contact=j,shift=a,meeting=b,overall=c) ##inser command
+			error="no"
+			
+		except:  
+			error="yes"
+	
+	d={'error':error}
+	return render(request,'srs.html',d)
+
+
 
 
 

@@ -28,4 +28,5 @@ urlpatterns = [
     path('more/',views.more),
     path('schedule/',views.schedule),
     path('calender/',views.calender),
+    path('srs/',views.srs),
 ]
