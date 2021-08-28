@@ -56,13 +56,13 @@ input[type="submit"]:hover{
     background-color: cadetblue;
 }
 .center{
-  padding: 40px !important;  
-  margin: 0 !important;
-  position: absolute !important;
-  top: 50% !important;
-  left: 50% !important;
-  right: 50% !important;
+  padding: 40px ;  
+  margin: 0 ;
+  position: absolute ;
+  top: 50% ;
+  left: 50% ;
+  right: 50% ;
  
-  -ms-transform: translate(-50%, -50%) !important;
-  transform: translate(-50%, -50%) !important;
+  -ms-transform: translate(-50%, -50%) ;
+  transform: translate(-50%, -50%) ;
 }
